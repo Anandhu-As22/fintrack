@@ -11,7 +11,7 @@ class Category(models.Model):
         ('INCOME','Income'),
         ("EXPENSE",'Expense')
     ]
-    name = models.CharField(max_length=50,unique=True)
+    name = models.CharField(max_length=50)
     type = models.CharField(max_length=7,choices=TYPE_CHOICES)
     user = models.ForeignKey(User,on_delete=models.CASCADE)
 

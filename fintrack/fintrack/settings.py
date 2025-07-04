@@ -129,3 +129,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = 'transaction_list' 
 LOGOUT_REDIRECT_URL = 'home' 
+
+CSRF_COOKIE_HTTPONLY = False  
+CSRF_COOKIE_SECURE = False   
+CSRF_COOKIE_SAMESITE = 'Lax'

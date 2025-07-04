@@ -6,6 +6,7 @@ from .models import Transaction,Category
 from django.db.models import Sum
 from .forms import CategoryForm
 from django.contrib import messages
+from django.http import JsonResponse
 
 # Create your views here.
 
@@ -110,3 +111,5 @@ def transaction_delete(request,id):
     return redirect('transaction_list')
 
 
+def check_auth(request):
+    return  JsonResponse({'isAuthenticated':request.user.is_authenticated})
